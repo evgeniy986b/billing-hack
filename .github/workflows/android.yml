@@ -27,7 +27,7 @@ jobs:
       run: ./gradlew build
 
     - name: Upload Build Artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: android-build-artifacts
         path: app/build/outputs/apk/release/*.apk  # Укажите путь к вашим артефактам
