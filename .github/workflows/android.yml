@@ -30,6 +30,6 @@ jobs:
     - name: Download Build Artifacts
       uses: actions/download-artifact@v4.3.0
       with:
-        name: android-build-artifacts
-        path: ./app/build/outputs/apk/release/*.apk
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        name: split-apks
+        path: android/app/build/outputs/apk/release/*.apk
+        if-no-files-found: error
